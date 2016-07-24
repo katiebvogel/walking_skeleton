@@ -1,29 +1,20 @@
-Initialize Node Package Manager (npm)
-
-Now, let's open a terminal in Atom.
-
-In the terminal, type in the command
+Initialize Node Package Manager (npm):
 
 npm init
 This will initialize the Node Package Manager and prompt you to enter some information about the app you are going to create. Hit the return key for any values listed as (default) below.
 
-
-
-Install Express
+Install Express:
 
 npm install express --save
 
-This will install express and record it as a dependency in the package.json file, SO THAT if someone else runs your project, express will come up as something that needs to be installed.
-
-node_modules
+node_modules:
 
 Look at the new node_modules folder that got included in the project. Inside of there, you will see an express directory that was added. This is the Express middleware that Node will use to make life easier. Basically you can think of this as a library for Node that will make working with Node to create a web server a more enjoyable experience.
 
-Create project source directories and files
+Create project source directories and files:
 
-Now, in the main project file (walking_skeleton), right click on the main project file and create a new directory, let's call this folder server. In that folder, let's create another file that we will call server.js.
 
-In server.js, let's write a little code.
+ server.js:
 
 var express = require('express');
 var app = express();
@@ -83,6 +74,7 @@ router.get('/', function(req, res) {
 });
 
 module.exports = router;
+
 Once again, we are bringing in Express. Then we are also bringing in 'Router', which is set to a variable from a return of the router method of the express object. Routers will help us manage how incoming requests are handled. More on this later. But now, instead of calling the 'get' method on 'app', we are calling it on the 'router'. So we set up the get method on the router object with a few more intricacies.
 
 As a final command, we export the router object. This makes it available to us throughout the rest of the application. Basically, we have set this up to be how we handle routes for the entire application.
@@ -280,14 +272,6 @@ npm install body-parser --save
 This will help our application render some of the information that we are throwing at it. More on this later, but let's head over to code.
 
 
-
-
-
- //  START HERE   Katie !!!  
-
-
-
- 
 Head over to our client folder at the root directory and open up the client.js. Here we are going to plug in some code:
 
 var app = angular.module('app', []);
